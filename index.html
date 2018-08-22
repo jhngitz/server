@@ -1,0 +1,13 @@
+﻿<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="socket.io.js"></script>
+<script>
+	
+	var socket = io.connect('http://localhost');
+
+socket.on('news', function (data) {
+console.log('KK:'+data);
+$('#messages').append($('<li>').text(data.hello));
+socket.emit('my other event',{my:'inicio'});
+});
+	
+</script>
