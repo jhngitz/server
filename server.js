@@ -15,7 +15,7 @@ x = socket;
 
 app.get('/sendevent', function(request, response) {
 console.log('XXXXX');
-x.emit('news', {hello: 'cachvache'});
+io.emit('news', {hello: 'cachvache'});
 response.send('FINITO');
 });
 
